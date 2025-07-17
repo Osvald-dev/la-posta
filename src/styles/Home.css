@@ -1,0 +1,150 @@
+/* Home.css */
+.hero {
+  height: 100vh;
+  background: url('../assets/img/hero.webp') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+
+  text-shadow: 1px 1px 2px black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about {
+background: #f0f4f8;
+  color: #1f2937;
+  padding: 2rem 2.5rem;
+  border-left: 6px solid #3b82f6;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin: 2.5rem auto;
+  transition: background 0.3s ease;
+}
+.about:hover{
+  background: #e4eefb;
+}
+
+.contact {
+  background-color: white;
+}
+
+.features {
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+
+}
+
+.h2-home {
+font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #1e40af; /* azul oscuro */
+  text-align: center;
+}
+
+.p-home {
+ font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+   }
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-btn {
+  padding: 10px 20px;
+  background-color: #b22222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #8b0000;
+}
+
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.h-acerca {
+  font-size: 2.2rem;
+  padding-bottom: 20px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-productos {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 1px 1px #000000;
+  padding-right: 10px;
+  font-size: larger;
+}
+
+.btn-pdf {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  text-shadow: 2px 1px 1px #000000;
+  font-size: larger;
+}
+
+
+@media (max-width: 2920px) {
+  .p-acerca {
+    hanging-punctuation: allow-end;
+    orphans: 2;
+    widows: 2;
+    padding: 0 2em 1em;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    background-image: url("../assets/img/5.webp");
+    /* Nueva imagen para móviles */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .h-acerca {
+    font-size: 1.4rem;
+  }
+
+  .h2-home {
+    font-size: 2.7rem;
+  }
+
+  .p-home {
+    font-size: 1.2rem;
+  }
+
+  .p-acerca {
+    hanging-punctuation: allow-end;
+    orphans: 2;
+    widows: 2;
+    font-size: .7rem;
+    padding: 0;
+  }
+}

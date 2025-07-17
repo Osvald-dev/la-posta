@@ -1,0 +1,126 @@
+/* === HeroCarousel.css === */
+
+/* Estilos generales */
+.hero-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Ocultar el carrusel mobile en desktop */
+.rio-carousel-desktop {
+  display: block;
+}
+
+.rio-carousel-mobile {
+  display: none;
+}
+
+/* Mostrar el carrusel móvil en pantallas pequeñas */
+@media (max-width: 768px) {
+  .rio-carousel-desktop {
+    display: none;
+  }
+
+  .rio-carousel-mobile {
+    display: block;
+  }
+}
+
+/* Estilos comunes para ambos carouseles */
+.rio-carousel-desktop img,
+.rio-carousel-mobile img {
+  width: 100%;
+  height: 60vh; /* Esto hará que la imagen ocupe toda la altura de la pantalla */
+  object-fit: cover; 
+}
+
+/* Overlay de texto */
+.rp-carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  z-index: 5;
+     background: linear-gradient(to bottom, rgb(200 200 200 / 45%), rgb(0 0 0 / 60%));
+}
+
+.rp-carousel-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color:antiquewhite;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 60%);
+}
+
+.rp-carousel-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rp-carousel-buttons,
+.rp-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.rp-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: white !important;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.rp-btn:hover {
+  
+}
+
+.rp-btn-secundario {
+  background-color: transparent;;
+}
+
+.rp-btn-secundario:hover {
+  
+}
+
+/* Ajustes del slick carousel */
+.slick-dots {
+  bottom: 15px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+  color: white !important;
+  opacity: 0.8 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #e63946 !important;
+  opacity: 1 !important;
+}
+
+.slick-slide {
+  position: relative !important;
+}
+@media screen and (max-width: 480px) {
+  .rp-carousel-overlay h2 {
+    font-size: 1.5rem;
+
+  }
+  .rp-carousel-overlay p {
+    font-size: 1rem;
+   
+  }
+   }

@@ -1,0 +1,20 @@
+.brand-slider-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  .brand-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .brand-slide img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+  }
+  

@@ -1,0 +1,42 @@
+.carousel-secondary-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .carousel-secondary {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-secondary-images img {
+    border-radius: 10px;
+    max-width: 100%;
+    
+  }
+  
+  .carousel-secondary-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .carousel-secondary-btn.left {
+    left: 10px;
+  }
+  
+  .carousel-secondary-btn.right {
+    right: 10px;
+  }
+  
