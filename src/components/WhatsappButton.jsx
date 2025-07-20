@@ -1,35 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import "../styles/WhatsAppButton.css";
 
 const WhatsAppButton = () => {
-  const numbers = [
-    "5493584247937",
-    "5493584247933",
-    "5493512303188",
-  ];
-
-  const [selectedNumber, setSelectedNumber] = useState(numbers[0]);
-
-  useEffect(() => {
-    const lastUsed = localStorage.getItem("lastWhatsAppIndex");
-    let newIndex = 0;
-
-    if (lastUsed !== null) {
-      const lastIndex = parseInt(lastUsed, 10);
-      newIndex = (lastIndex + 1) % numbers.length;
-    }
-
-    localStorage.setItem("lastWhatsAppIndex", newIndex);
-    setSelectedNumber(numbers[newIndex]);
-  }, []);
+  const phoneNumber = "5493525530412"; // Tu número único
 
   return (
     <a
-      href={`https://wa.me/${selectedNumber}`}
+      data-aos="none"
+      data-aos-offset="0"
+      data-aos-delay="0"
+      data-aos-duration="0"
+
+      href={`https://wa.me/${phoneNumber}`}
       className="whatsapp-button-fixed"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Habla con nosotros por WhatsApp"
+
+
     >
       <FaWhatsapp className="whatsapp-icon" />
     </a>

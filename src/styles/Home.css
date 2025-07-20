@@ -16,20 +16,36 @@
   padding: 20px;
   border-radius: 10px;
 }
+.top-bar {
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
 
-.about {
-background: #f0f4f8;
-  color: #1f2937;
-  padding: 2rem 2.5rem;
-  border-left: 6px solid #3b82f6;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  margin: 2.5rem auto;
-  transition: background 0.3s ease;
+.rotating-text p {
+  display: none;
+  margin: 0;
+  animation: fadeIn 0.5s ease-in-out;
 }
-.about:hover{
-  background: #e4eefb;
+
+.rotating-text p.active {
+  display: block;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
 
 .contact {
   background-color: white;
@@ -42,19 +58,7 @@ background: #f0f4f8;
 
 }
 
-.h2-home {
-font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-  color: #1e40af; /* azul oscuro */
-  text-align: center;
-}
 
-.p-home {
- font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-   }
 
 .features ul {
   list-style: none;
@@ -82,10 +86,6 @@ font-size: 2rem;
   padding: 20px;
 }
 
-.h-acerca {
-  font-size: 2.2rem;
-  padding-bottom: 20px;
-}
 
 .hero-buttons {
   margin-top: 20px;
@@ -111,12 +111,18 @@ font-size: 2rem;
 }
 
 
-@media (max-width: 2920px) {
-  .p-acerca {
-    hanging-punctuation: allow-end;
-    orphans: 2;
-    widows: 2;
-    padding: 0 2em 1em;
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    height: auto; /* permite que crezca en altura */
+    padding: 4px 8px; /* da aire al texto */
+    text-align: center;
+  }
+
+  .rotating-text p {
+    white-space: normal; /* permite salto de línea */
+    font-size: 13px; /* opcional: más chico en mobile */
   }
 }
 
@@ -128,9 +134,7 @@ font-size: 2rem;
     background-position: center;
   }
 
-  .h-acerca {
-    font-size: 1.4rem;
-  }
+
 
   .h2-home {
     font-size: 2.7rem;
@@ -140,11 +144,5 @@ font-size: 2rem;
     font-size: 1.2rem;
   }
 
-  .p-acerca {
-    hanging-punctuation: allow-end;
-    orphans: 2;
-    widows: 2;
-    font-size: .7rem;
-    padding: 0;
-  }
+
 }

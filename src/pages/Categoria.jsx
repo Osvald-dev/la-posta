@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"; // Importamos useNavigate
 import SubCategoryCard from "../components/SubCategoryCard.jsx";
 import Modal from "../components/Modal";
-import NavBar from "../components/Navbar.jsx";
 import Footer from '../components/Footer.jsx';
 import productsData from "../data/productsData";
+import Navbar from "../components/Navbar.jsx";
 import { FaArrowLeft } from "react-icons/fa"; // Importamos el ícono de flecha
 import "../styles/Categories.css"; // Asegúrate de importar los estilos
 
@@ -21,7 +21,7 @@ const Categoria = () => {
 
   return (
     <>
-      <NavBar />
+    <Navbar />
 
       <div className="categoria-container">
         {/* Botón de volver atrás */}

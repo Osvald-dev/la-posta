@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Footer from "../components/Footer";
-
-import "../styles/Contacto.css";
 import Navbar from "../components/Navbar";
+import "../styles/Contacto.css";
 
 const Contacto = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -26,8 +25,7 @@ const Contacto = () => {
 
   return (
     <>
-      <Navbar />
-
+<Navbar />
       <button className="back-button" onClick={() => navigate(-1)}>
         <FaArrowLeft className="arrow-icon" /> Volver
       </button>

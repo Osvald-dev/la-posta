@@ -86,26 +86,28 @@
 }
 
 .back-button {
-  position: fixed;
-  top: 25px;
-  left: 25px;
-  background: #b61111;
-  border: none;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 10px rgba(182, 17, 17, 0.4);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
+ position: fixed;
+    top: 1px;
+    font-size: revert;
+    left: 0px;
+    background: #e14b02;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex
+;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 7px rgba(182, 17, 17, 0.4);
+    transition: background-color 0.3s ease;
+    z-index: 200;
 }
 
 .back-button:hover {
-  background: #7f1d1d;
+  background: #ce6e00;
 }
 
 .arrow-icon {

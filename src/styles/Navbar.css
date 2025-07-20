@@ -1,186 +1,122 @@
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  padding: 15px 10px;
+
+
+.mobile-menu a:hover {
+  color: #ff6600; /* Ajustá según tu color primario */
+}
+
+/* src/styles/Navbar.css */
+
+.navbar-container {
   position: relative;
-  z-index: 9999;
-}
-
-.logo {
-  width: 18rem;
-  height: auto;
-}
-
-.logo-container {
+  z-index: 10000;
+  background: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 12px 25px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
 }
 
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Botón hamburguesa */
 .menu-btn {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 10001;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
+  z-index: 11000;
 }
 
 .menu-icon {
-  width: 160px;
-  height: 40px;
-  background-color: black;
-  position: relative;
-  transition: all 0.3s ease;
+  font-size: 28px;
+  color: #333;
 }
-
-.menu-icon::before,
-.menu-icon::after {
-  content: "";
-  width: 160px;
-  height: 40px;
-  background-color: black;
-  position: absolute;
-  left: 0;
-  transition: all 0.3s ease;
+.no-scroll {
+  overflow: hidden;
 }
-
-.menu-icon::before {
-  top: -10px;
-}
-
-.menu-icon::after {
-  top: 10px;
-}
-
-.menu-btn.open .menu-icon {
-  background-color: transparent;
-}
-
-.menu-btn.open .menu-icon::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.menu-btn.open .menu-icon::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-/* Redes sociales */
-.social-icons {
+/* Menú escritorio */
+.desktop-menu {
   display: flex;
-  gap: 40px;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
 }
 
-.social-icons a {
-  color: black;
-  font-size: 32px;
-}
-
-/* Botón CTA */
-.cta-button {
-  background-color: #b22222;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+.desktop-menu li a {
+  color: #333;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #8b1a1a;
+.desktop-menu li a:hover {
+  color: #ec4a22;
 }
 
-/* Slogan */
-.slogan {
-  font-size: 14px;
-  color: #555;
-  text-align: center;
-  margin-top: 5px;
-}
-
-/* Menú lateral */
-.nav-menu {
+/* Menú móvil */
+.mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 75%;
+  width: 100%;
   height: 100vh;
-  background: rgba(30, 30, 30, 0.6);
-  backdrop-filter: blur(15px);
-  border-radius: 0 0 0 20px;
-  box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+  backdrop-filter: blur(10px); /* Efecto difuminado */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  align-items: center;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
 }
 
-.nav-menu.open {
+.mobile-menu.open {
   right: 0;
-  transform: translateX(0);
-  opacity: 1;
-  z-index: 10000;
 }
-.hamburguesa{
-  font-size: 32px;
-}
-.nav-menu ul {
+
+.mobile-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
-.nav-menu li {
+.mobile-menu li {
   margin: 20px 0;
 }
 
-.nav-menu a {
-  color: white;
-  font-size: 20px;
+.mobile-menu a {
+  font-size: 1.5rem;
   text-decoration: none;
-  transition: color 0.3s;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.nav-menu a:hover {
-  color: #b22222;
-}
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .desktop-menu {
+    display: none;
+  }
 
+  .menu-btn {
+    display: block;
+  }
+}
 
 @media screen and (max-width: 480px) {
-  .logo {
-    width: 9rem;
+  .navbar-logo img {
+    height: 60px;
   }
 
-  .slogan {
-    font-size: 9px;
-    margin-top: 0;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 10px;
-  }
-
-  .social-icons a {
-    color: black;
-    font-size: 24px;
-  }
-  .navbar{
-    padding: 15px 0;
-  }
-  .hamburguesa{
-    font-size: 24px;
+  .mobile-menu {
+    width: 100%;
+    max-width: none;
   }
 }

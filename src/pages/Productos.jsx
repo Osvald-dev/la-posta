@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CategoryCard from "../components/CategoryCard";
 import melaminasImg from "../assets/img/melaminas.webp";
@@ -8,6 +7,7 @@ import ferreteriaImg from "../assets/img/ferreteria.webp";
 import maderasImg from "../assets/img/maderas.webp";
 import placasImg from "../assets/img/placas.webp";
 import pisosImg from "../assets/img/pisos.webp";
+import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom"; // Importamos useNavigate
 import { FaArrowLeft } from "react-icons/fa";
 import '../styles/Productos.css'
@@ -26,8 +26,7 @@ const Productos = () => {
   const navigate = useNavigate();
   return (
     <>
-
-      <Navbar />
+<Navbar />
 
       <div className="productos-container">
         <h2 className="title">Categorías de Productos</h2>

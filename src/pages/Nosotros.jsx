@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import Navbar from "../components/Navbar";
 import img1 from "../assets/img/e.webp";
 import img2 from "../assets/img/equipo.webp";
 import "../styles/Nosotros.css";
@@ -27,8 +27,7 @@ function Nosotros() {
 
   return (
     <>
-      <Navbar />
-
+<Navbar />
       <button className="back-button" onClick={() => navigate(-1)}>
         <FaArrowLeft className="arrow-icon" /> Volver
       </button>
