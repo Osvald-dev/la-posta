@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // <-- sin espacio al final
+  base: '/la-posta/', // <-- sin espacio al final
 });
