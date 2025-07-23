@@ -1,71 +1,89 @@
 .info-section {
-  padding: 60px 20px;
-  background-color: #f7f7f7;
+  background-color: #f9f9f9;
+  border-top: 12px solid var(--color-primary);
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.info-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100vw; /* ← Ojo: esto sí ocupa el 100% del viewport */
+  padding: 10px 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.info-block.left .info-img {
-  order: 1;
+.info-card {
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  max-width: 1000px;
+  transition: transform 0.3s ease;
+   flex: 1 1 calc(25% - 2rem); /* 4 por fila con espacio entre ellas */
+  min-width: 260px;
+  max-width: 100%;
 }
 
-.info-block.left .info-text {
-  order: 2;
-}
-
-.info-block.right .info-img {
-  order: 2;
-}
-
-.info-block.right .info-text {
-  order: 1;
+.info-card:hover {
+  transform: translateY(-4px);
 }
 
 .info-img img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  display: block;
 }
 
-.info-img img:hover {
-  transform: scale(1.03);
+.info-content {
+  padding: 24px;
+  text-align: center;
 }
 
-.info-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.info-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.info-content p {
+  font-size: 1.2rem;
   color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .info-block {
-    flex-direction: column;
-    text-align: center;
+.map-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.map-button:hover {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+}
+
+/* Responsive ajustes */
+@media (min-width: 1240px) {
+  .info-section{
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .info-card {
+    flex-direction: row;
   }
 
-  .info-block.left .info-img,
-  .info-block.right .info-img,
-  .info-block.left .info-text,
-  .info-block.right .info-text {
-    order: unset;
+  .info-img {
+    flex: 1;
+  }
+
+  .info-content {
+    flex: 1;
+    text-align: left;
+    padding: 32px;
+  }
+
+  .info-content p {
+    font-size: 1.4rem;
   }
 }

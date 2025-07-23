@@ -41,7 +41,7 @@ const Navbar = () => {
         <li><Link to="/productos" onClick={closeMenu}>Productos</Link></li>
         <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
         <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
-        <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li>
+        {/* <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li> */}
       </ul>
 
       <nav className={`mobile-menu ${menuOpen ? "open" : ""}`}>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <li><Link to="/productos" onClick={closeMenu}>Productos</Link></li>
           <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
           <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
-          <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li>
+          {/* <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li> */}
         </ul>
       </nav>
     </nav>

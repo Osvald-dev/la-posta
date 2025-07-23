@@ -65,8 +65,7 @@ const Carousel = () => {
     <div className="carousel-container-mdf">
       <div className="header-section">
         <div className="header-text">
-          <img src={headerImage} alt="Naturaleza" className="header-image" />
-          <h2>Línea Mesopotamia</h2>
+          <h2>Todo para tus proyectos</h2>
         </div>
 
       </div>

@@ -52,7 +52,7 @@ const Hero = () => {
           <li><Link to="/productos">Productos</Link></li>
           <li><Link to="/contacto">Contacto</Link></li>
           <li><Link to="/nosotros">Nosotros</Link></li>
-          <li><Link to="/servicios">Servicios</Link></li>
+          {/* <li><Link to="/servicios">Servicios</Link></li> */}
         </ul>
 
         {/* Menú lateral mobile */}
@@ -62,7 +62,7 @@ const Hero = () => {
             <li><Link to="/productos" onClick={closeMenu}>Productos</Link></li>
             <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
             <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
-            <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li>
+            {/* <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li> */}
           </ul>
         </nav>
       </div>

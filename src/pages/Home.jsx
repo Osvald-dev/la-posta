@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 // import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from '../components/Footer';
-import Carousel from '../components/Carousel';
-// import HeroCarousel from "../components/HeroCarousel";
 import Info from "../components/Info";
-import CarouselSecondary from "../components/CarouselSecondary";
+import Categorias from "../components/ModuleCarousel";
 import SliderMarcas from '../components/SliderMarcas';
-import FAQ from "../components/FAQ";
+
 import "../styles/Home.css";
 
 const Home = () => {
@@ -17,6 +15,7 @@ const Home = () => {
       {/* <Navbar />
       <HeroCarousel /> */}
       <div className="top-bar">
+        
         <div className="rotating-text">
           <p className="active">📍 Ruta 9 Norte km 757.5 - Sinsacate</p>
           <p>☎️ 3525 53-0412</p>
@@ -25,17 +24,19 @@ const Home = () => {
         </div>
       </div>
       <Hero />
-          <Info />
-      <Carousel />
+      <Info />
+      <div className="separador">
+        <div class="separator-aos" data-aos="fade-up">
+          <h2 class="separador-h2">Tenemos todo para tus proyectos</h2>
+        </div>
 
-      <section className="features">
-        <h3>Trabajamos con</h3>
+        <Categorias />
+      </div>
+      <section className="section-marcas">
         <SliderMarcas />
       </section>
 
-      <section className="contact">
-        <FAQ />
-      </section>
+     
 
       <Footer />
     </>

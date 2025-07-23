@@ -16,6 +16,7 @@ import marca7 from "../assets/img/marcas/marca7.webp";
 import marca8 from "../assets/img/marcas/marca8.webp";
 import marca9 from "../assets/img/marcas/marca9.webp";
 import marca10 from "../assets/img/marcas/marca10.webp";
+// import logoPosta from "../assets/img/logo.png";
 
 
 const BrandSlider = () => {
@@ -55,17 +56,24 @@ const BrandSlider = () => {
     marca8, marca9, marca10
   ];
 
-  return (
-    <div className="brand-slider-container">
-      <Slider {...settings}>
-        {brands.map((brand, index) => (
-          <div key={index} className="brand-slide">
-            <img src={brand} alt={`Marca ${index + 1}`} />
-          </div>
-        ))}
-      </Slider>
+return (
+  <div className="brand-slider-container">
+    <div className="brand-slider-header">
+      <div className="orange-line" />
+      {/* <img src={logoPosta} alt="La Posta" className="logo-posta" /> */}
+      <h2>Nos respaldan
+        
+      </h2>
     </div>
-  );
+    <Slider {...settings}>
+      {brands.map((brand, index) => (
+        <div key={index} className="brand-slide">
+          <img src={brand} alt={`Marca ${index + 1}`} />
+        </div>
+      ))}
+    </Slider>
+  </div>
+);
 };
 
 export default BrandSlider;

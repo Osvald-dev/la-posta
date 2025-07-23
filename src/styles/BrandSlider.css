@@ -1,20 +1,58 @@
+.brand-slider-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+
+.brand-slider-header h2 {
+  font-size: 1.5rem;
+  color:#000000;
+  font-weight: 600;
+  padding: 0 16px;
+  margin: 0;
+  border-left: 4px solid var(--color-primary);
+}
+
 .brand-slider-container {
-    width: 90%;
-    margin: auto;
-    padding: 20px 0;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #ffffff; /* fondo gris claro */
+  overflow: hidden;
+}
+
+
+.brand-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.brand-slide img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.brand-slide img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+/* .logo-posta {
+  height: auto;
+max-width: 240px;
+} */
+
+@media (min-width:768px){
+  .brand-slider-header{
+    flex-direction: row;
   }
-  
-  .brand-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .brand-slide img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    object-fit: contain;
-  }
-  
+}

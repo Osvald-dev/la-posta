@@ -1,46 +1,86 @@
-import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
-import CategoryCard from "../components/CategoryCard";
-import melaminasImg from "../assets/img/melaminas.webp";
-import herrajesImg from "../assets/img/herrajes.webp";
-import ferreteriaImg from "../assets/img/ferreteria.webp";
-import maderasImg from "../assets/img/maderas.webp";
-import placasImg from "../assets/img/placas.webp";
-import pisosImg from "../assets/img/pisos.webp";
-import Navbar from "../components/Navbar";
-import { useNavigate } from "react-router-dom"; // Importamos useNavigate
-import { FaArrowLeft } from "react-icons/fa";
-import '../styles/Productos.css'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import NavBar from "../components/NavBar";
+import Footer from '../components/Footer';
+import BackButton from '../components/BackButton';
+import '../styles/Productos.css';
+import imgMader from '../assets/img/mader.webp';
+import imgHerr from '../assets/img/herr.webp';
+import imgMelaminas from '../assets/img/melaminas.webp';
+import imgCemento from '../assets/img/cemento.webp';
+import imgAislante from '../assets/img/asilantes.webp';
+import imgBulones from '../assets/img/bulones.webp';
 
-const categories = [
-  { name: "Melaminas", img: melaminasImg },
-  { name: "Herrajes", img: herrajesImg },
-  { name: "Ferreteria", img: ferreteriaImg },
-  { name: "Maderas", img: maderasImg },
-  { name: "Placas", img: placasImg },
-  { name: "Pisos", img: pisosImg },
+const categorias = [
+  {
+    titulo: 'Maderas',
+    descripcion: 'Variedad en maderas macizas, cepilladas e impregnadas para interiores y exteriores.',
+    imagen: imgMader,
+  },
+  {
+    titulo: 'Herramientas',
+    descripcion: 'Todo en herramientas manuales y eléctricas para profesionales y aficionados.',
+    imagen: imgHerr,
+  },
+  {
+    titulo: 'Melaminas',
+    descripcion: 'Placas melamínicas de diferentes espesores y acabados para muebles y revestimientos.',
+    imagen: imgMelaminas,
+  },
+  {
+    titulo: 'Cementos',
+    descripcion: 'Gama de cementos en bolsa de Holcim, ideales para proyectos de construcción de cualquier tamaño y tipo.',
+    imagen: imgCemento,
+  },
+  {
+    titulo: 'Aislantes',
+    descripcion: 'Elegí la aislación que mejor se adapte para tu casa o proyecto: techos, paredes exteriores e interiores o cielorrazos.',
+    imagen: imgAislante,
+  },
+  {
+    titulo: 'Tornillos y Bulones',
+    descripcion: 'autoperforantes, resistentes y en todas las medidas.',
+    imagen: imgBulones,
+  },
 ];
-// const navigate = useNavigate();
 
 const Productos = () => {
-  const navigate = useNavigate();
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
-<Navbar />
+      <NavBar />
+      <BackButton/>
 
       <div className="productos-container">
-        <h2 className="title">Categorías de Productos</h2>
-        <div className="categories-grid">
-          {categories.map((category, index) => (
-            <Link key={index} to={`/productos/${category.name.toLowerCase()}`}>
-              <CategoryCard name={category.name} img={category.img} />
-            </Link>
+        <section className="productos-hero">
+          <div className="productos-hero-overlay">
+            <h1 data-aos="fade-down">Nuestros Productos</h1>
+            <p data-aos="fade-up">Materiales de calidad para cada proyecto</p>
+          </div>
+        </section>
+
+        <section className="productos-categorias">
+          {categorias.map((cat, index) => (
+            <div className="producto-card" key={index} data-aos="fade-up">
+              <img src={cat.imagen} alt={cat.titulo} className="producto-img" />
+              <div className="producto-info">
+                <h2>{cat.titulo}</h2>
+                <p>{cat.descripcion}</p>
+              </div>
+            </div>
           ))}
-        </div>
+        </section>
+
+        <section className="productos-cta" data-aos="fade-up">
+          <p>¿Tenés un proyecto en mente? Visitá nuestro local o escribinos y te ayudamos a elegir lo mejor para vos.</p>
+          <a href="/contacto" className="cta-btn">Contactanos</a>
+        </section>
       </div>
-      <button className="back-button" onClick={() => navigate(-1)}>
-        <FaArrowLeft className="arrow-icon" /> Volver
-      </button>
+   
       <Footer />
     </>
   );

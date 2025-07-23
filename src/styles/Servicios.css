@@ -74,25 +74,51 @@
 
 /* Grid de servicios */
 .servicios-grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .servicios-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /* Card de servicio */
 .servicio-card {
-
-  /* Tamaño máximo de cada card */
-  padding: 10px;
-
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .servicio-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.servicio-card h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+  margin-top: 15px;
 }
 
 /* Imágenes dentro de las cards */
@@ -104,11 +130,6 @@
 }
 
 /* Títulos de las cards */
-.servicio-card h3 {
-  margin-top: 15px;
-  font-size: 20px;
-  color: #333;
-}
 
 /* Texto de las cards */
 .servicio-card p {
@@ -140,7 +161,41 @@
   margin-left: auto;
   margin-right: auto;
 }
+.servicios-cta {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fefefe;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+}
 
+.servicios-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--color-primary-dark);
+}
+
+.servicios-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.cta-btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  background-color: var(--color-primary-dark);
+}
 /* Ajustes responsive adicionales */
 @media (max-width: 768px) {
   .servicios-texto {
