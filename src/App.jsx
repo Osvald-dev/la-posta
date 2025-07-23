@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contacto from "./pages/Contacto.jsx";
@@ -12,9 +12,7 @@ import WhatsAppButton from "./components/WhatsappButton.jsx";
 const App = () => {
   return (
     <div className="global-container">
-
-      <BrowserRouter>  {/* Usa HashRouter en vez de BrowserRouter */}
-
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/productos" element={<Productos />} />
@@ -25,7 +23,7 @@ const App = () => {
         <div className="whatsapp-container">
           <WhatsAppButton />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
