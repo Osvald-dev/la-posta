@@ -41,6 +41,16 @@ const Navbar = () => {
         <li><Link to="/productos" onClick={closeMenu}>Productos</Link></li>
         <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
         <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
+        <li>
+          <a
+            className="catalogo-btn"
+            href={`${import.meta.env.BASE_URL}catalogo-melaminas.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Catálogo de melaminas
+          </a>
+        </li>
         {/* <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li> */}
       </ul>
 
@@ -50,6 +60,17 @@ const Navbar = () => {
           <li><Link to="/productos" onClick={closeMenu}>Productos</Link></li>
           <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
           <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
+          <li>
+            <a
+              className="catalogo-btn"
+              href={`${import.meta.env.BASE_URL}catalogo-melaminas.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+            >
+              Catálogo de melaminas
+            </a>
+          </li>
           {/* <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li> */}
         </ul>
       </nav>

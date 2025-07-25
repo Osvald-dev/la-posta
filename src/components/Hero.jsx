@@ -9,14 +9,14 @@ const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-  const newState = !menuOpen;
-  setMenuOpen(newState);
-  document.body.style.overflow = newState ? "hidden" : "auto";
-};
+    const newState = !menuOpen;
+    setMenuOpen(newState);
+    document.body.style.overflow = newState ? "hidden" : "auto";
+  };
   const closeMenu = () => {
-  setMenuOpen(false);
-  document.body.style.overflow = "auto";
-};
+    setMenuOpen(false);
+    document.body.style.overflow = "auto";
+  };
 
 
 
@@ -52,6 +52,16 @@ const Hero = () => {
           <li><Link to="/productos">Productos</Link></li>
           <li><Link to="/contacto">Contacto</Link></li>
           <li><Link to="/nosotros">Nosotros</Link></li>
+          <li>
+            <a
+              href="/catalogo-melaminas.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="catalogo-link"
+            >
+              Catálogo de Melaminas
+            </a>
+          </li>
           {/* <li><Link to="/servicios">Servicios</Link></li> */}
         </ul>
 
@@ -62,6 +72,17 @@ const Hero = () => {
             <li><Link to="/productos" onClick={closeMenu}>Productos</Link></li>
             <li><Link to="/contacto" onClick={closeMenu}>Contacto</Link></li>
             <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
+            <li>
+              <a
+                href={`${import.meta.env.BASE_URL}catalogo-melaminas.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="catalogo-link"
+              >
+                Ver Melaminas
+              </a>
+            </li>
             {/* <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li> */}
           </ul>
         </nav>

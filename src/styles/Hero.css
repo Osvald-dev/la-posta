@@ -157,6 +157,23 @@
   color: #ec4a22;
 }
 
+.catalogo-link{
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #ec4a22;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.catalogo-link:hover {
+  background-color: #d8421e;
+  transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-header {

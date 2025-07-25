@@ -6,6 +6,7 @@ import Contacto from "./pages/Contacto.jsx";
 import Home from "./pages/Home.jsx";
 import Productos from "./pages/Productos.jsx";
 import Nosotros from "./pages/Nosotros.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 // import ServiciosPage from "./pages/Servicios.jsx";
 import WhatsAppButton from "./components/WhatsappButton.jsx";
 
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <div className="global-container">
       <HashRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/productos" element={<Productos />} />

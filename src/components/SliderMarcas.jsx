@@ -16,6 +16,7 @@ import marca7 from "../assets/img/marcas/marca7.webp";
 import marca8 from "../assets/img/marcas/marca8.webp";
 import marca9 from "../assets/img/marcas/marca9.webp";
 import marca10 from "../assets/img/marcas/marca10.webp";
+import marca11 from "../assets/img/marcas/marca11.webp";
 // import logoPosta from "../assets/img/logo.png";
 
 
@@ -52,8 +53,8 @@ const BrandSlider = () => {
   };
 
   const brands = [
-    marca1, marca2, marca3, marca4, marca5, marca6, marca7,
-    marca8, marca9, marca10
+    marca1, marca2,marca11, marca3, marca4, marca5, marca6, marca7,
+    marca8, marca9, marca10, 
   ];
 
 return (
