@@ -108,7 +108,7 @@
   display: block;
   height: 3px;
   width: 60px;
-  background-color: #ff6f00; /* Podés cambiar el color */
+  /* background-color: #ff6f00; */
   margin: 12px auto 0;
   border-radius: 2px;
 }

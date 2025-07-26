@@ -41,7 +41,7 @@ const Categorias = () => {
         style={{ backgroundImage: `url(${categorias[activa].img})` }}
       >
         <div className="categoria-overlay">
-          <a href="/productos" className="ver-todo-boton">
+          <a href="/#/productos" className="ver-todo-boton">
             Ver todo
           </a>
         </div>

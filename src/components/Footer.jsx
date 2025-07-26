@@ -41,7 +41,7 @@ const Footer = () => {
             <h4>Síguenos</h4>
             <div className="social-icons">
                 <a href="https://www.instagram.com/lapostamaderas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-                <a href="https://www.facebook.com/la-posta-maderas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
+                <a href="https://www.facebook.com/lapostamaderas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
             </div>
         </div>
 

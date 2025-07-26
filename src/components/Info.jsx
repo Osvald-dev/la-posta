@@ -17,7 +17,7 @@ const bloques = [
     texto: "Encontranos fácilmente en Google Maps",
     boton: {
       label: "Abrir en Google Maps",
-      url: "https://g.co/kgs/XFrn5gT",
+      url: "https://www.google.com/maps?q=-30.943822936443485, -64.07920435962875",
     },
   },
   {

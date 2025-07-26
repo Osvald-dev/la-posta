@@ -99,7 +99,7 @@ const Productos = () => {
 
         <section className="productos-cta" data-aos="fade-up">
           <p>¿Tenés un proyecto en mente? Visitá nuestro local o escribinos y te ayudamos a elegir lo mejor para vos.</p>
-          <a href="/contacto" className="cta-btn">Contactanos</a>
+          <a href="/#/contacto" className="cta-btn">Contactanos</a>
         </section>
       </div>
 
